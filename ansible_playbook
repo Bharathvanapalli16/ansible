@@ -1,0 +1,15 @@
+---
+-name : update 10.0.1.224
+hostname : 10.0.1.224
+remote_user : root
+
+task:
+-name: Install apache-tomcat-9.0.45
+yum :
+name : apache-tomcat-9.0.45
+state : present
+
+notify : to restart tomcat-9.0.45
+
+Handler : to restart tomcat-9.0.45
+state : restarted
